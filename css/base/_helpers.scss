@@ -1,0 +1,31 @@
+.hidden,
+.menu-label,
+#wp-admin-bar-comments,
+#wp-admin-bar-wp-logo
+ {
+    display: none;
+}
+
+.alignright{
+    text-align: right;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.flex {
+    display: flex;
+}
+
+hr {
+    color: $light_gray;
+    border: none;
+    border-bottom: 1px solid $light_gray;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+}

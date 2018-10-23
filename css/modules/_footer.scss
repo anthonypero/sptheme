@@ -1,0 +1,245 @@
+.site-footer {
+    overflow: hidden;
+
+    &__logo {
+
+        svg {  
+            path {
+                fill: $secondary_color;
+            }
+        }
+    }
+
+    &__church-info {
+        color: white; 
+
+        .church-name {
+            font-family: 'Roboto Condensed', Impact, sans-serif;
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding-right: 15px;
+        }
+
+        .church-address {
+            font-style: normal;
+            font-size: 1.6rem;
+            font-weight: 100;
+            padding-right: 15px;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $secondary_color;
+                }
+            }
+        }
+
+        .church-hours {
+            font-style: normal;
+            font-size: 1.6rem;
+            font-weight: 100;
+            padding-right: 15px;
+        }
+    }
+
+    &__social {
+        align-items: center;
+        display: flex;
+    }
+
+
+    .list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        &--item {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        &--item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background: white;
+            transform: scaleY(0);
+            transition: transform .3s,
+                        width .4s cubic-bezier(.8, 0, 0, 1) .3s;
+        }
+
+        &--item:hover::before {
+            transform: scaleY(1);
+            width: 100%;
+        };
+
+        &--link {
+            color: white;
+            text-decoration: none;
+            font-size: 2.5rem;
+            line-height: 1;
+            padding: 50px 15px;
+            position: relative;
+            z-index: 10;
+
+            &.facebook:hover {
+                color: $facebook;
+            }
+
+            &.twitter:hover {
+                color: $twitter;
+            }
+            &.youtube:hover {
+                color: $google;
+            }
+            &.google-maps:hover {
+                color: $maps;
+            }
+            &.instagram:hover {
+                color: $instagram;
+            }
+            &.linkedin:hover {
+                color: $linkedin;
+            }
+            &.youtube:hover {
+                color: $youtube; 
+            }
+        }
+    }
+}
+
+.home .site-footer {
+    overflow: hidden;
+
+    &__logo {
+
+        svg {  
+            path {
+                fill: $main_color;
+            }
+        }
+    }
+
+    &__church-info {
+        .church-address {
+            a {
+                &:hover {
+                    color: $main_color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 834px) {
+    .site-footer {
+
+        padding: 0 10px;
+
+        &__church-info {
+    
+            .church-name {
+                font-size: 2rem;
+            }
+    
+            .church-address {
+                font-size: 1.2rem;
+            }
+    
+            .church-hours {
+                font-size: 1.2rem;
+            }
+        }
+
+        .list {
+        
+            &--item {
+                padding: 35px 0; 
+            }
+        }
+
+        &__logo {
+            height: 100%;
+            flex-basis: 50px;
+            padding: 4px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+
+    .site-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+        padding-top: 20px;
+
+        &__church-info {
+            flex-direction: column;
+            max-width:350px;
+
+            .church-hours {
+                width: inherit;
+                flex: 0;
+                align-self: flex-start;
+            }
+
+            .church-name,
+            .church-address {
+                flex: 0;
+                align-self: flex-start;
+            }
+        }
+
+        &__social {
+            flex-shrink: 0;
+            width: 100%;
+            align-self: center;
+            display: flex;
+            align-content: space-around;
+            align-items: center;
+            justify-content: center;
+
+            .list {
+                align-self: center;
+                align-content: space-around;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+
+    .site-footer {
+        display: block;
+
+        &__logo {
+            width: 50px;
+            margin: 0 auto 20px;
+        }
+
+        &__church-info {
+            display: block;
+            text-align: center;
+            padding: 0;
+            margin: 0 auto;
+
+            .church-name,
+            .church-address,
+            .church-hours {
+                margin:0;
+                padding: 0;
+            }
+        }
+    }
+
+}
