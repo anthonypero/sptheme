@@ -34,7 +34,8 @@ if ( function_exists('virtuosic_theme_info') ) {
 
                 <?php // Loop through child pages
 
-                    $now = date('Ymd');
+                    $tommorrow = new DateTime('tomorrow');
+                    $now = $tommorrow->format('Ymd');
                     $paged = get_query_var( 'paged' );
                     $args = [
                         'post_type'         => 'event',
@@ -77,6 +78,12 @@ if ( function_exists('virtuosic_theme_info') ) {
                     </div>
 
                     <?php endif; /* Closes $query->have_posts() */ ?>
+
+                    <?php if ( ! $query->have_posts() ) : ?>
+
+                    <div class="page-content"><p>There are no upcoming events at this time. Click <a href="#">here to see past events</a>.</p></div>
+
+                    <?php endif; ?>
 
                 </aside>
 
