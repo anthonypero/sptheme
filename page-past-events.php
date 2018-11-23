@@ -41,14 +41,14 @@ if ( function_exists('virtuosic_theme_info') ) {
                         'post_type'         => 'event',
                         'posts_per_page'    => 5,
                         'paged'             => $paged,
-                        'order'             => 'ASC',
+                        'order'             => 'DESC',
                         'orderby'           => 'meta_value',
                         'meta_key'          => 'event_date',
                         'meta_type'         => 'DATETIME',
                         'meta_query'        => array(
                             array(
                                 'key'       => 'event_date',
-                                'compare'   => '>',
+                                'compare'   => '<',
                                 'value'     => $now,
                                 'type'      => 'DATETIME'
                             ),
