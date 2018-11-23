@@ -2,7 +2,7 @@
 
 add_theme_support( 'post-thumbnails' ); 
 
-add_image_size( 'sp_thumb', 125, 125, true );
+add_image_size( 'sp_thumb', 220, 220, true );
 add_image_size( 'sp_2x3_md', 400, 600, true );
 add_image_size( 'sp_2x3_sm', 150, 225, true );
 add_image_size( 'sp_2x3_lg', 600, 900, true );

@@ -14,7 +14,7 @@
     <?php if ( has_tag() ) : ?>
 
     <span class="submitted__tag">
-        <?php the_tags( '' ); ?> 
+        <?php the_tags( '','','' ); ?> 
     </span>
 
     <?php endif; /* Closes if has_tag() */ ?>

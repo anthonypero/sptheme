@@ -18,7 +18,8 @@ require get_template_directory(  ) . '/inc/function-breadcrumbs.php';
 
 // Style and Script support
 function sp_theme_load_styles() {
-    wp_enqueue_style( 'sp-styles', get_stylesheet_directory_uri() . '/css/style.css', [], time(), 'all' );
+    wp_enqueue_style( 'sp-styles', get_stylesheet_directory_uri() . '/css/style.css', [], 'all' );
+    wp_enqueue_style( 'sp-styles-override', get_stylesheet_directory_uri() . '/style.css', [], 'all' );
     wp_enqueue_style( 'Google-Fonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700|Roboto:300i,300,400i,400,700i,700', [], null, 'all');
     wp_enqueue_style( 'font-awesome-5', get_stylesheet_directory_uri() . '/css/all.min.css', [], '5.2', 'all' );
 

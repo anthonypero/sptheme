@@ -15,8 +15,8 @@ if ( function_exists('virtuosic_theme_info') ) {
                     </a>
                 </span>
                 <span class="breadcrumbs__trail--item">
-                    <a href="<?php echo get_site_url() . '/rectors-blog'; ?>" class="breadcrumbs__trail--link">
-                        Rector's Blog
+                    <a href="<?php echo get_site_url() . '/events'; ?>" class="breadcrumbs__trail--link">
+                        Events
                     </a>
                 </span>
                 <span class="breadcrumbs__trail--item">
