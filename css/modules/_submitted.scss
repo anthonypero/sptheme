@@ -25,6 +25,9 @@
         font-size: .8em;
         margin-right: 3px;
         margin-top: -1px;
+        display: flex;
+        align-items: center;
+        margin: 1px;
 
         &:hover {
             background-color: $main_color;
@@ -33,15 +36,39 @@
         }
     }
 
+    &__cat {
+        text-align: center;
+    }
+
     &__tag {
+
+        text-align: center;
+        flex-wrap: wrap;
         
         a {
             background-color: $secondary_color;
             border-color: $secondary_color;
         }
     }
+
+    &__label {
+        white-space: nowrap;
+    }
 }
 
 .single .submitted {
     margin-top: -20px;
+}
+
+@media (max-width: 600px) {
+
+    .submitted {
+
+        display: block;
+    
+        &__label {
+            display: block;
+            padding-top: 5px;
+        }
+    }
 }

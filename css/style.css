@@ -2103,6 +2103,13 @@ body:not(.home) .featured-image {
   font-size: .8em;
   margin-right: 3px;
   margin-top: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1px;
 }
 
 .submitted a:hover {
@@ -2111,13 +2118,37 @@ body:not(.home) .featured-image {
   color: white;
 }
 
+.submitted__cat {
+  text-align: center;
+}
+
+.submitted__tag {
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .submitted__tag a {
   background-color: #26a9d4;
   border-color: #26a9d4;
 }
 
+.submitted__label {
+  white-space: nowrap;
+}
+
 .single .submitted {
   margin-top: -20px;
+}
+
+@media (max-width: 600px) {
+  .submitted {
+    display: block;
+  }
+  .submitted__label {
+    display: block;
+    padding-top: 5px;
+  }
 }
 
 .post-image figure {

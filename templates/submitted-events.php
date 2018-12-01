@@ -1,7 +1,7 @@
 <?php if ( has_category() || has_tag() ) : ?>
 <div class="submitted">
 
-    Posted in&nbsp;&nbsp;
+    <span class="submitted__label">Posted in&nbsp;&nbsp;</span>
     
     <?php if ( has_category() ) : ?>
 
@@ -9,7 +9,7 @@
         <?php the_category( '' ); ?> 
     </span>
 
-    <?php if ( has_category() && has_tag() ) : ?>&nbsp;and&nbsp;&nbsp;<?php endif; ?>
+    <?php if ( has_category() && has_tag() ) : ?><span class="submitted__label">&nbsp;and&nbsp;&nbsp;</span><?php endif; ?>
 
     <?php if ( has_tag() ) : ?>
 
