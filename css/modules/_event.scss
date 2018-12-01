@@ -16,3 +16,16 @@
         margin-top: $gutter / 2;
     }
 }
+
+@media (max-width: 600px) {
+
+    .event {
+        display: block;
+
+        &__info {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: $gutter;
+        }
+    }
+}

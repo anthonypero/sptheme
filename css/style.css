@@ -2429,6 +2429,17 @@ body:not(.home) .featured-image {
   margin-top: 12.5px;
 }
 
+@media (max-width: 600px) {
+  .event {
+    display: block;
+  }
+  .event__info {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
+
 .sermon-list .excerpt-list__row--post-image {
   width: 250px;
 }
