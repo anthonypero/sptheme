@@ -30,7 +30,7 @@
             </a>
             <?php endif; ?>
             <?php if ( !is_user_logged_in() ) : ?>
-            <a href="<?php bloginfo('url'); ?>/wp-admin" title="Log In to <?php bloginfo('name'); ?>">
+            <a href="<?php bloginfo('url'); ?>/user-login" title="Log In to <?php bloginfo('name'); ?>">
                 <i class="fas fa-sign-in-alt"></i>
             </a>
             <?php endif; ?>
